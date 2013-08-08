@@ -1,0 +1,230 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{statba2010}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=fd17f7dce20314001ac56a2700f1a22b}{Bundesamt}{B\bibinitperiod}{Statistisches}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=fd17f7dce20314001ac56a2700f1a22b}{Bundesamt}{B\bibinitperiod}{Statistisches}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{fd17f7dce20314001ac56a2700f1a22b}
+      \strng{fullhash}{fd17f7dce20314001ac56a2700f1a22b}
+      \field{sortinit}{7}
+      \field{labeltitle}{73\% der privaten Haushalte haben einen Internetzugang}
+      \field{title}{73\% der privaten Haushalte haben einen Internetzugang}
+      \field{urlday}{28}
+      \field{urlmonth}{08}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://www.destatis.de/jetspeed/portal/cms/Sites/destatis/Internet/DE/Presse/pm/2009/12/PD09__464__IKT,templateId=renderPrint.psml
+      \endverb
+    \endentry
+    \entry{canalysandroid}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=aca86116da60399359d77c40c9d37ba1}{Canalys}{C\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=aca86116da60399359d77c40c9d37ba1}{Canalys}{C\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{aca86116da60399359d77c40c9d37ba1}
+      \strng{fullhash}{aca86116da60399359d77c40c9d37ba1}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android smart phone shipments grow 886\% year-on-year in Q2 2010}
+      \field{title}{Android smart phone shipments grow 886\% year-on-year in Q2 2010}
+      \field{urlday}{28}
+      \field{urlmonth}{08}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://canalys.com/pr/2010/r2010081.html
+      \endverb
+    \endentry
+    \entry{danic-introducing}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=5f99ffec5f37396b4eb2f3870ab5e221}{Đanić}{Đ\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=66ed97a706db241716c5a675c66d9fe5}{Orehovački}{O\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=387f2604fbe569a52275b83ddde9371e}{Stapić}{S\bibinitperiod}{Z.}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=5f99ffec5f37396b4eb2f3870ab5e221}{Đanić}{Đ\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=66ed97a706db241716c5a675c66d9fe5}{Orehovački}{O\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=387f2604fbe569a52275b83ddde9371e}{Stapić}{S\bibinitperiod}{Z.}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8b23a95d931e1d9e755feb6c0b30e74f}
+      \strng{fullhash}{8b23a95d931e1d9e755feb6c0b30e74f}
+      \field{sortinit}{Đ}
+      \field{labeltitle}{Introducing CaCM: toward new students collaboration model}
+      \field{title}{Introducing CaCM: toward new students collaboration model}
+    \endentry
+    \entry{userfacebook}{url}{}
+      \name{labelname}{1}{}{%
+        {{hash=d85544fce402c7a2a96a48078edaf203}{Facebook}{F\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=d85544fce402c7a2a96a48078edaf203}{Facebook}{F\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{fullhash}{d85544fce402c7a2a96a48078edaf203}
+      \field{sortinit}{F}
+      \field{labeltitle}{Statistics | Facebook}
+      \field{title}{Statistics | Facebook}
+      \field{urlday}{04}
+      \field{urlmonth}{03}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://www.facebook.com/press/info.php?statistics=
+      \endverb
+    \endentry
+    \entry{Mawston}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=e4ecc3b61891b69e5555ddae2ace11ea}{Mawston}{M\bibinitperiod}{Neil}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=e4ecc3b61891b69e5555ddae2ace11ea}{Mawston}{M\bibinitperiod}{Neil}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e4ecc3b61891b69e5555ddae2ace11ea}
+      \strng{fullhash}{e4ecc3b61891b69e5555ddae2ace11ea}
+      \field{sortinit}{G}
+      \field{labeltitle}{Global Smartphone Shipments Jump 43\% to 60 Million Units in Q2 2010}
+      \field{title}{Global Smartphone Shipments Jump 43\% to 60 Million Units in Q2 2010}
+      \field{urlday}{26}
+      \field{urlmonth}{08}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://www.strategyanalytics.com/default.aspx?mod=ReportAbstractViewer&a0=5661
+      \endverb
+    \endentry
+    \entry{googletransit}{online}{}
+      \field{sortinit}{G}
+      \field{labeltitle}{Google Transit}
+      \field{title}{Google Transit}
+      \field{urlday}{26}
+      \field{urlmonth}{08}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://www.google.com/intl/en/landing/transit/text.html
+      \endverb
+    \endentry
+    \entry{bitkomhandy}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=1f0093efd55c9d03f3e2c36678f07e32}{BITKOM}{B\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=1f0093efd55c9d03f3e2c36678f07e32}{BITKOM}{B\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{1f0093efd55c9d03f3e2c36678f07e32}
+      \strng{fullhash}{1f0093efd55c9d03f3e2c36678f07e32}
+      \field{sortinit}{I}
+      \field{labeltitle}{Internet per Handy erobert den Massenmarkt}
+      \field{title}{Internet per Handy erobert den Massenmarkt}
+      \field{urlday}{01}
+      \field{urlmonth}{09}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://www.bitkom.org/files/documents/BITKOM-Presseinfo_Handy-Funktionen_15_08_2010.pdf
+      \endverb
+    \endentry
+    \entry{iphonedev}{online}{}
+      \field{sortinit}{i}
+      \field{labeltitle}{iPhone Developer Program}
+      \field{title}{iPhone Developer Program}
+      \field{urlday}{30}
+      \field{urlmonth}{08}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://developer.apple.com/programs/iphone/index.html
+      \endverb
+    \endentry
+    \entry{ms2010}{bachelorsthesis}{}
+      \name{labelname}{1}{}{%
+        {{hash=a81ac4e33fb3462b33cb7ad6c3058402}{Speicher}{S\bibinitperiod}{Maximilian}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=a81ac4e33fb3462b33cb7ad6c3058402}{Speicher}{S\bibinitperiod}{Maximilian}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen University}%
+      }
+      \strng{namehash}{a81ac4e33fb3462b33cb7ad6c3058402}
+      \strng{fullhash}{a81ac4e33fb3462b33cb7ad6c3058402}
+      \field{sortinit}{S}
+      \field{labeltitle}{{PLEbot}}
+      \field{subtitle}{{A Personal Learning Environment based on the Google Wave Robots and Gadgets APIs}}
+      \field{title}{{PLEbot}}
+      \field{type}{Bachelor's thesis}
+      \field{year}{2010}
+    \endentry
+    \entry{statbundesamt}{online}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{Statistisches Bundesamt Deutschland - 56\% der Internetnutzer sind täglich oder fast täglich online}
+      \field{title}{Statistisches Bundesamt Deutschland - 56\% der Internetnutzer sind täglich oder fast täglich online}
+      \field{urlday}{04}
+      \field{urlmonth}{03}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://www.destatis.de/jetspeed/portal/cms/Sites/destatis/Internet/DE/Presse/pm/2007/02/PD07__079__ikt,templateId=renderPrint.psml
+      \endverb
+    \endentry
+    \entry{userstudivz}{url}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{studiVZ | Über uns}
+      \field{title}{studiVZ | Über uns}
+      \field{urlday}{04}
+      \field{urlmonth}{03}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://www.studivz.net/l/about_us/1
+      \endverb
+    \endentry
+    \entry{ruleof5}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=753054f71283d85f82cda8e35daf6bac}{Nielsen}{N\bibinitperiod}{Jakob}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=753054f71283d85f82cda8e35daf6bac}{Nielsen}{N\bibinitperiod}{Jakob}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{753054f71283d85f82cda8e35daf6bac}
+      \strng{fullhash}{753054f71283d85f82cda8e35daf6bac}
+      \field{sortinit}{U}
+      \field{labeltitle}{Usability Testing with 5 Users}
+      \field{title}{Usability Testing with 5 Users}
+      \field{urlday}{24}
+      \field{urlmonth}{08}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://www.useit.com/alertbox/20000319.html
+      \endverb
+    \endentry
+    \entry{wius}{online}{}
+      \field{sortinit}{W}
+      \field{labeltitle}{World Internet Usage Statistics News and World Population Stats}
+      \field{title}{World Internet Usage Statistics News and World Population Stats}
+      \field{urlday}{30}
+      \field{urlmonth}{08}
+      \field{urlyear}{2010}
+      \verb{url}
+      \verb http://internetworldstats.com/stats.htm
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

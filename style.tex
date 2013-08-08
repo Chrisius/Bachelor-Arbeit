@@ -1,0 +1,612 @@
+% Leichte Variation von http://hci.rwth-aachen.de/karrer_thesistemplate
+% Weiter leichte veränderungen für Mo - v=0.9b
+% =============
+% = Changelog =
+% =============
+% [0.99b]
+% new - DotVarDescription environment: Adds dots between label and description.
+% new - Addes some listings styles from Max Speicher (@maxspeicher) for the listings package and some additional from Gregor Aisch.
+% changed - VarDescription: The description label is not aligned to the left.
+%
+% [0.98b]
+% changed - styling of headings (section to subparagraph) from titleformat to addtokomafont so it is
+%           possible to change the style with \addtokomafont{\Large} etc. from the main document.
+%
+% [0.97b]
+% new - abstract environment -> \begin{abstract}[name (default none)] TEXT \end{abtract}
+% new - acknowledgments environment -> \begin{acknowledgments}[Acknowledgments] TEXT \end{acknowledgments}
+%
+% [0.96b]
+% new - compatibility with scrbook \part command (sectsty package is incompatible)
+% removed - sectsty package (replaced functionality with titlesec commands)
+%
+% [0.953b]
+% new - added hyphen option to url-package to allow line breaks after hyphens "-" in urls
+%
+% [0.952b]
+% changed - automatically set header to 'Bibliography' with \printbibliography
+%
+% [0.951b]
+% new - bibliography heading changable with \def\bibheadingonline{TEXT} and \def\bibheadingoffline{TEXT}
+% changed - \mnote color (light blue) and \mnote fontsize normal changeable to footnotesize with \def\mnotefootnotesize{}
+% changed - Seperate bibliography titles - references -> References
+%
+% [0.95b]
+% new - changed to biblatex
+% new - command \setwidesite to be called before \printbibliography to increase side width
+% new - biblatex filter online (@online) and offline (!@online)
+% dep - \widebibliography
+%
+% [0.9b]
+% new - \usepackage{soul} for higlighting (\hl{some text} etc.)
+% new - \shl{some text} to mark text red, no background marking
+%
+% [0.85b]
+% new - Environment VarDiscription | \begin{VarDescription}{widest word}
+% new - \widebibliography{} command
+% new - scenario list (alph label and only 2pt item seperation)
+% changed - changed seperator between multiple citations from ',' to ';'
+% changed - changed labels in itemize list
+% changed - csquote style to american (starts quotations with double quote instead of single quotes (inverted commas)).
+% changed - csquote cite command to use natbibs \citep command.
+%
+% [0.8b]
+% new - \footcite[]{} command
+% new - Changed color of item/enum and description label to LightBlue
+
+
+
+\usepackage[hyphens]{url}
+
+%
+%   B I B L I O G R A P H Y   &   C I T A T I O N S
+%
+%\usepackage[square]{natbib}  % round?
+% \usepackage[round]{dinat}
+
+% \usepackage{bibgerm}
+% \usepackage{natbib}
+% \bibliographystyle{plainnat}
+% \bibliographystyle{gerapali}
+% \bibliographystyle{natdin}
+% \bibliographystyle{natdineng}
+% \bibpunct{(}{)}{;}{a}{,}{,}
+% \bibpunct{[}{]}{,}{a}{,}{,}
+% \bibpunct{[}{]}{;}{a}{,}{,}
+% \newcommand{\fullcite}{\cite}
+% \newcommand{\footcite}[2][]{\footnote{#1 \citet{#2}}}
+
+% ============
+% = BibLaTeX =
+% ============
+% natbib for compability with natbib style citing and authoryear type
+\usepackage[style=numeric,natbib=true]{biblatex}
+% \usepackage[style=alphabetic,natbib=true]{biblatex}
+% \usepackage[style=authoryear,natbib=true]{biblatex}
+% \usepackage[style=authoryear,natbib=true, useprefix=true]{biblatex}
+
+\renewcommand{\bibsetup}{%
+  \markboth{\MakeUppercase{Bibliography}}{}
+}
+
+\newcommand{\setwidesite}{%
+  \fancyhfoffset[LE,RO]{\marginparsep+\marginparwidth-4cm}
+  \fancyheadoffset[LO,RE]{0cm}
+  \fancyfootoffset[RE]{2cm}
+  \newgeometry{inner=2cm, outer=2cm, bottom=4cm}}
+
+\ifdefined\bibheadingonline
+  \defbibheading{online}{\section*{\bibheadingonline}}
+\else
+  \defbibheading{online}{\section*{Online References}}
+\fi
+\ifdefined\bibheadingoffline
+  \defbibheading{offline}{\section*{\bibheadingoffline}}
+\else
+  \defbibheading{offline}{\section*{Printed References}}
+\fi
+
+\defbibfilter{online}{%
+  \( \type{online} \)}
+
+\defbibfilter{offline}{%
+  \( \not \type{online} \)}
+  
+% \DeclareNameFormat{sortname}{%
+%   \iffirstinits
+%   {\usebibmacro{name:last-first}{#1}{#4}{#5}{#7}}
+%   {\usebibmacro{name:last-first}{#1}{#3}{#5}{#7}}%
+%   \usebibmacro{name:andothers}}
+  
+
+
+
+
+%
+% LANGUAGE & ENCODING
+%
+\usepackage[english]{babel}
+% \usepackage[ngerman]{babel}
+% Bug: this statement seems to be useless, instead, the _last_
+% language from the parameterlist to \usepackage{babel} seems to be
+% important
+% \selectlanguage{ngerman}
+\selectlanguage{english}
+\usepackage[T1]{fontenc}
+% \usepackage[latin1]{inputenc}   % can use native umlauts
+\usepackage[utf8]{inputenc}   % can use native umlauts
+% \usepackage[babel,german=quotes]{csquotes}  % provides \enquote{Blupp} => "`Blupp"'
+\usepackage[babel,english=american]{csquotes}	% provides \enquote{Blupp} => "`Blupp"'
+% \SetCiteCommand{\citep}
+\SetCiteCommand{\parencite} % Changed for biblatex
+
+\usepackage{units}              % unified way of setting values with units
+
+\usepackage{appendix}
+% \renewcommand{\appendixpagename}{Anhänge}
+% \renewcommand{\appendixtocname}{Anh"ange}
+%
+% FONTS
+%
+% \usepackage{times}              % use times font
+% \usepackage{lmodern}            % use lmodern fonts
+%change standard fonts to Palatino and Helvetica
+% \usepackage{palatino}
+\usepackage{mathpazo} 
+\usepackage[scaled=.95]{helvet} 
+\usepackage{courier} 
+
+\usepackage{noindent} %do not indent at new paragraphs but add a vertical offset
+
+\usepackage{url}
+
+%
+% SYMBOLS
+%
+% \usepackage[right]{eurosym}
+\usepackage{gensymb}
+\usepackage{textcomp}           % for \textmu (non-italic $\mu$)
+% \usepackage{marvosym}
+\makeatletter					% make "@" a regular letter, not a special symbol
+
+
+%\setcounter{secnumdepth}{3}     % limit enumeration depth
+%\setcounter{tocdepth}{3}        % limit TOC depth
+
+% tables & table formatting
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multirow}
+% \usepackage{dcolumn}%D{,}{,}{Nachkommastellen}
+
+% \setlength{\itemsep}{5mm plus10mm minus20mm}
+
+
+\fboxsep0mm
+
+\usepackage{amsmath}            % math fonts
+\usepackage{amssymb}            % math symbols
+\usepackage{setspace}           % line spacing 
+
+% package for higlighting etc. (\hl{}...)
+\usepackage{soul}
+
+% simple highlight without soul package
+\newcommand{\shl}[1]{\textcolor{red}{#1}}
+
+%
+% C O D E   L I S T I N G S
+%
+
+%\usepackage{fancyvrb}           % algorithm-boxes
+\usepackage{listings}
+
+% \lstset{
+%   numbers=left,
+%   numberstyle=\tiny,
+%   numbersep=5pt,
+%   breaklines=true,
+%   stepnumber=5,
+%   tabsize=2,
+%   basicstyle=\ttfamily\small,
+%   frame=none,
+%   numberfirstline=true,
+%   firstnumber=1
+%   }
+% ============================
+% = Listings Styles from Max =
+% ============================
+
+\definecolor{violet}{cmyk}{0.45,0.97,0.27,0.21}
+\definecolor{lstblue}{cmyk}{1,0.80,0,0}
+\definecolor{lstgreen}{cmyk}{0.71,0.21,0.65,0.22}
+\definecolor{bluegrey}{cmyk}{0.56,0.24,0.11,0.05}
+\definecolor{javadoc}{cmyk}{0.88,0.59,0,0}
+\definecolor{lstgrey}{cmyk}{0.55,0.44,0.42,0.32}
+
+\lstdefinelanguage{SQL}{
+     keywords={},
+     keywordstyle=\color{bluegrey}\bfseries,
+     morekeywords=[2]{CREATE,TABLE,IF,NOT,EXISTS,NULL,SET,DEFAULT,PRIMARY,KEY,COLLATE,CHARACTER,AUTO_INCREMENT,ENGINE,CHARSET},
+     keywordstyle={[2]\color{violet}\bfseries},
+     otherkeywords={int,varchar,double,text,tinyint},
+     sensitive=false,
+     morecomment=[l][\color{lstgreen}]{//},
+     morecomment=[s][\color{lstgreen}]{/*}{*/},
+     morecomment=[s][\color{javadoc}]{/**}{*/},
+     morestring=[b]',
+     morestring=[b]"
+  }
+\lstdefinelanguage{PHP}{
+     keywords={},
+     keywordstyle=\color{bluegrey}\bfseries,
+     morekeywords=[2]{static,function,if,return,pow,sin,cos,asin,min,sqrt,int},
+     keywordstyle={[2]\color{violet}\bfseries},
+     otherkeywords={@param, @returns, @author, @type, @link, @see},
+     sensitive=false,
+     morecomment=[l][\color{lstgreen}]{//},
+     morecomment=[s][\color{lstgreen}]{/*}{*/},
+     morecomment=[s][\color{javadoc}]{/**}{*/},
+     morestring=[b]',
+     morestring=[b]"
+  }
+\lstdefinelanguage{JavaScript}{
+     keywords={},
+     keywordstyle=\color{bluegrey}\bfseries,
+     morekeywords=[2]{attributes, class, classend, do, empty, endif, endwhile, fail, function, functionend, if, implements, in, inherit, inout, not, of, operations, out, return, set, then, types, while, use},
+     keywordstyle={[2]\color{violet}\bfseries},
+     otherkeywords={@param, @returns, @author, @type, @link, @see},
+     sensitive=false,
+     morecomment=[l][\color{lstgreen}]{//},
+     morecomment=[s][\color{lstgreen}]{/*}{*/},
+     morecomment=[s][\color{javadoc}]{/**}{*/},
+     morestring=[b]',
+     morestring=[b]"
+  }
+\lstdefinelanguage{Java}{
+     keywords={},
+     keywordstyle=\color{bluegrey}\bfseries,
+     morekeywords=[2]{abstract,boolean,break,byte,case,catch,char,class,
+      const,continue,default,do,double,else,extends,false,final,
+      finally,float,for,goto,if,implements,import,instanceof,int,
+      interface,label,long,native,new,null,package,private,protected,
+      public,return,short,static,super,switch,synchronized,this,throw,
+      throws,transient,true,try,void,volatile,while},
+     keywordstyle={[2]\color{violet}\bfseries},
+     morekeywords=[3]{@SuppressWarnings, @Capability, @Override},
+     keywordstyle={[3]\color{lstgrey}},
+     otherkeywords={@param, @return, @returns, @author, @link, @see},
+     sensitive,
+     morecomment=[l]//,
+     morecomment=[s]{/*}{*/},
+     morecomment=[s][\color{javadoc}]{/**}{*/},
+     morestring=[b]",
+     morestring=[b]',
+  }[keywords,comments,strings]
+
+% some listings styles from Gregor Aisch
+% http://vis4.net/blog/2009/09/noch-mehr-sprach-definitionen-fuer-latex-listings/
+
+\lstdefinelanguage{HTML5} {morekeywords={a, abbr, address, area, article, aside, audio, b, base, bb, bdo, blockquote,  body, br, button, canvas, caption, cite, code, col, colgroup, command, datagrid, datalist, dd, del, details, dialog, dfn, div, dl, dt, em, embed, eventsource, fieldset, figure, footer,  form,  h1, h2,  h3,  h4, h5,  h6,  head,  header,  hr, html,  i, iframe,  img,  input,  ins, kbd,  label,  legend,  li,  link,  mark,  map,  menu,  meta,  meter,  nav,  noscript,  object,  ol,  optgroup,  option,  output,  p,  param,  pre,  progress,  q,  ruby,  rp,  rt,  samp,  script,  section,  select,  small,  source,  span,  strong,  style,  sub,  sup,  table,  tbody,  td,  textarea,  tfoot,  th,  thead,  time,  title,  tr,  ul,  var,  video},
+sensitive=false, morecomment=[s]{<!--}{-->}, morestring=[b]", morestring=[d]'}
+
+\lstdefinelanguage{CSS} {morekeywords={azimuth,  background-attachment,  background-color,  background-image,  background-position,  background-repeat,  background,  border-collapse,  border-color,  border-spacing,  border-style,  border-top, border-right, border-bottom, border-left,  border-top-color, border-right-color, border-bottom-color, border-left-color,  border-top-style, border-right-style, border-bottom-style, border-left-style,  border-top-width, border-right-width, border-bottom-width, border-left-width,  border-width,  border,  bottom,  caption-side,  clear,  clip,  color,  content,  counter-increment,  counter-reset,  cue-after,  cue-before,  cue,  cursor,  direction,  display,  elevation,  empty-cells,  float,  font-family,  font-size,  font-style,  font-variant,  font-weight,  font,  height,  left,  letter-spacing,  line-height,  list-style-image,  list-style-position,  list-style-type,  list-style,  margin-right, margin-left,  margin-top, margin-bottom,  margin,  max-height,  max-width,  min-height,  min-width,  orphans,  outline-color,  outline-style,  outline-width,  outline,  overflow,  padding-top, padding-right, padding-bottom, padding-left,  padding,  page-break-after,  page-break-before,  page-break-inside,  pause-after,  pause-before,  pause,  pitch-range,  pitch,  play-during,  position,  quotes,  richness,  right,  speak-header,  speak-numeral,  speak-punctuation,  speak,  speech-rate,  stress,  table-layout,  text-align,  text-decoration,  text-indent,  text-transform,  top,  unicode-bidi,  vertical-align,  visibility,  voice-family,  volume,  white-space,  widows,  width,  word-spacing,  z-index},
+sensitive=false, morecomment=[s]{/*}{*/}, morestring=[b]", morestring=[d]'}
+
+\lstdefinelanguage{JavaFX} {morekeywords={abstract, after, and, as, assert, at, attribute, before, bind, bound, break, catch, class, continue, def, delete, else, exclusive, extends, false, finally, first, for, from, function, if, import, indexof, in, init, insert, instanceof, into, inverse, last, lazy, mixin, mod, new, not, null, on, or, override, package, postinit, private, protected, public-init, public, public-read, replace, return, reverse, sizeof, static, step, super, then, this, throw, trigger, true, try, tween, typeof, var, where, while, with },
+sensitive=false, morecomment=[l]{//}, morecomment=[s]{/*}{*/}, morestring=[b]", morestring=[d]'}
+
+\lstdefinelanguage{MXML} {morekeywords={mx:Accordion, mx:Box, mx:Canvas, mx:ControlBar, mx:DividedBox, mx:Form, mx:FormHeading, mx:FormItem, mx:Grid, mx:GridItem, mx:GridRow, mx:HBox, mx:HDividedBox, mx:LinkBar, mx:Panel, mx:TabBar, mx:TabNavigator, mx:Tile, mx:TitleWindow, mx:VBox, mx:VDividedBox, mx:ViewStack, mx:Button, mx:CheckBox, mx:ComboBase, mx:ComboBox, mx:DataGrid, mx:DateChooser, mx:DateField, mx:HRule, mx:Image, mx:Label, mx:Link, mx:List, mx:Loader, mx:MediaController, mx:MediaDisplay, mx:MediaPlayback, mx:MenuBar, mx:NumericStepper, mx:ProgressBar, mx:RadioButton, mx:RadioButtonGroup, mx:Spacer, mx:Text, mx:TextArea, mx:TextInput, mx:Tree, mx:VRule, mx:VScrollBar, mx:Application, mx:Repeater, mx:UIComponent, mx:UIObject, mx:View, mx:FlexExtension, mx:UIComponentExtension, mx:UIObjectExtension, mx:Fade, mx:Move, mx:Parallel, mx:Pause, mx:Resize, mx:Sequence, mx:WipeDown, mx:WipeLeft, mx:WipeRight, mx:WipeUp, mx:Zoom, mx:EventDispatcher, mx:LowLevelEvents, mx:UIEventDispatcher, mx:CurrencyFormatter, mx:DateFormatter, mx:NumberFormatter, mx:PhoneFormatter, mx:ZipCodeFormatter, mx:CursorManager, mx:DepthManager, mx:DragManager, mx:FocusManager, mx:HistoryManager, mx:LayoutManager, mx:OverlappedWindows, mx:PopUpManager, mx:SystemManager, mx:TooltipManager, mx:CreditCardValidator, mx:DateValidator, mx:EmailValidator, mx:NumberValidator, mx:PhoneNumberValidator, mx:SocialSecurityValidator, mx:StringValidator, mx:ZipCodeValidator, mx:DownloadProgressBar, mx:ArrayUtil, mx:ClassUtil, mx:Delegate, mx:ObjectCopy, mx:URLUtil, mx:XMLUtil, mx:CSSSetStyle, mx:CSSStyleDeclaration, mx:CSSTextStyles, mx:StyleManager, mx:HTTPService, mx:RemoteObject, mx:Service},
+sensitive=false, morecomment=[s]{<!--}{-->}, morestring=[b]", morestring=[d]'}
+
+\lstdefinelanguage{LZX} {morekeywords={a, alert, animator, animatorgroup , attribute, audio , axis, axisstyle , b, barchart, basebutton , basebuttonrepeater , basecombobox , basecomponent , basedatacombobox , basedatepicker , basedatepickerday , basedatepickerweek , basefloatinglist , basefocusview , baseform , baseformitem , basegrid , basegridcolumn , baselist , baselistitem , basescrollarrow , basescrollbar , basescrollthumb , basescrolltrack , baseslider , basestyle , basetab , basetabelement , basetabpane , basetabs , basetabsbar , basetabscontent , basetabslider , basetrackgroup , basetree , basevaluecomponent , basewindow , br , button , canvas , chart , chartbgstyle , chartstyle , checkbox , class , columnchart , combobox , command , connection , connectiondatasource , constantboundslayout , constantlayout , datacolumn , datacombobox , datalabel , datamarker , datapath , datapointer , dataselectionmanager , dataseries , dataset , datasource , datastyle , datastylelist , datatip , datepicker , debug , dragstate , drawview , edittext , event , face , floatinglist , font , font , form , frame , grid , gridcolumn , gridtext , handler , hbox , horizontalaxis , hscrollbar , i , image , img , import , include , inputtext , javarpc , label , labelstyle , layout , legend , library , linechart , linestyle , list , listitem , LzTextFormat , menu , menubar , menuitem , menuseparator , method , modaldialog , multistatebutton , node , p , param , piechart , piechartplotarea , plainfloatinglist , plotstyle , pointstyle , pre , radiobutton , radiogroup , rectangularchart , regionstyle , remotecall , resizelayout , resizestate , resource , reverselayout , richinputtext , rpc , script , scrollbar , security , selectionmanager , sessionrpc , simpleboundslayout , simpleinputtext , simplelayout , slider , soap , splash , stableborderlayout , state , statictext , style , submit , swatchview , SyncTester , tab , tabelement , tabpane , tabs , tabsbar , tabscontent , tabslider , Test , TestCase , TestResult , TestSuite , text , textlistitem , tickstyle , tree , u , valueline , valuelinestyle , valuepoints , valuepointstyle , valueregion , valueregionstyle , vbox , verticalaxis , view , view , vscrollbar , webapprpc , window , windowpanel , wrappinglayout , XMLHttpRequest , xmlrpc , zoomarea},
+sensitive=false, morecomment=[s]{<!--}{-->}, morestring=[b]", morestring=[d]'}
+
+\lstset{
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	stepnumber=5,
+	tabsize=2,
+	basicstyle=\ttfamily\small,
+	frame=none,
+	numberfirstline=true,
+	firstnumber=1,
+	keywordstyle=\color{violet}\bfseries,
+	ndkeywordstyle=\color{bluegrey}\bfseries,
+	identifierstyle=\color{black},
+  commentstyle=\color{lstgreen}\ttfamily,
+  stringstyle=\color{lstblue}\ttfamily,
+  showstringspaces=false
+	}
+
+	
+% frame = none, single, topline,bottomline
+% columns = fixed
+
+% ===========================
+% = Change list definitions =
+% ===========================
+
+% change color of item list
+\renewcommand{\labelitemi}{\color{LightBlue}$\bullet$}
+\renewcommand{\labelitemii}{\color{LightBlue}$\circ$}
+\renewcommand{\labelitemiii}{\color{LightBlue}$\ast$}
+\renewcommand{\labelitemiv}{\color{LightBlue}$\diamond$}
+
+% change color of enum list
+\renewcommand{\labelenumi}{\color{LightBlue}\arabic{enumi}.}
+\renewcommand{\labelenumii}{\color{LightBlue}\alph{enumii})}
+\renewcommand{\labelenumiii}{\color{LightBlue}\roman{enumiii}.}
+\renewcommand{\labelenumiv}{\color{LightBlue}\Alph{enumiv}.}
+
+% change color of description list
+\usepackage{enumitem}
+\setdescription{font=\color{LightBlue}\rm\itshape}
+% \renewenvironment{description}{\list{font=\color{LightBlue}\itshape}}{\endlist}
+
+% change color of footnotes
+\renewcommand{\thefootnote}{\color{LightBlue}\arabic{footnote}}
+
+
+% use nice footnote indentation
+\deffootnote[1em]{1em}{1em}{\textsuperscript{\thefootnotemark}\,}
+
+
+%
+%	G R A P H I C S   A N D   I M A G E S
+%
+\usepackage{graphicx}
+\graphicspath{{images/}}		% path to your image folder
+
+\usepackage{eso-pic}	% needed for the full-face titlepage
+\usepackage{chngpage}	% we need this to determine if a figure is on an odd or even page
+
+% captions of tables and images
+\usepackage[hang,small,sf]{caption}
+\renewcommand{\captionfont}{\sffamily\small}
+\renewcommand{\captionlabelfont}{\bfseries}
+
+
+\usepackage{float}
+\usepackage{placeins}
+% \floatstyle{ruled}
+%\floatplacement
+
+\renewcommand{\floatpagefraction}{0.85}	% if a figure takes more than 85% of a page it will be typeset on a separate page
+\usepackage[it,bf,tight,hang,raggedright]{subfigure}
+
+%\numberwithin{figure}{section}
+%\numberwithin{table}{section}
+
+% =============================
+% = Wide Bibliography Command =
+% =============================
+\newcommand{\widebibliography}[1]{
+  \fancyhfoffset[LE,RO]{\marginparsep+\marginparwidth-4cm}
+  \fancyheadoffset[LO,RE]{0cm}
+  \fancyfootoffset[RE]{2cm}
+  \newgeometry{inner=2cm, outer=2cm, bottom=4cm} 
+}
+
+
+
+%
+%  HEADER
+%
+
+% stolen from i10
+% Change page headers and footers:
+\usepackage{calc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhfoffset[LE,RO]{\marginparsep+\marginparwidth}
+\fancyhfoffset[RE,LO]{2cm}
+% \fancyheadoffset[RE,LO]{\hoffset + \oddsidemargin}
+\renewcommand{\headrule}{{\color{LightBlue}% 
+  \hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}}
+\fancyhf{}
+\fancyhead[RE]{\slshape \nouppercase{\leftmark}}    % Even page header: "page   chapter"
+\fancyhead[LO]{\slshape \nouppercase{\rightmark}}   % Odd  page header: "section   page"
+\fancyhead[RO,LE]{\bfseries \thepage}
+\fancyfoot[LE]{\STYLEleftpicture}
+\fancyfoot[RO]{\STYLErightpicture}
+\fancyfoot[RE]{\STYLEfootnotetext}
+\renewcommand{\headrulewidth}{1pt}    % Underline headers
+\renewcommand{\footrulewidth}{0pt}    
+
+\fancypagestyle{plain}{               % No chapter+section on chapter start pages
+\fancyhf{}
+% \fancyhead[LO,RE]{}
+\fancyhead[RE]{\slshape \nouppercase{\leftmark}}    % Even page header: "page   chapter"
+\fancyhead[LO]{\slshape \nouppercase{\rightmark}}   % Odd  page header: "section   page"
+\fancyhead[RO,LE]{\bfseries \thepage}
+\fancyfoot[LE]{\STYLEleftpicture}
+\fancyfoot[RO]{\STYLErightpicture}
+\fancyfoot[RE]{\STYLEfootnotetext}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+}
+
+
+% Change Chapter/Section styles
+
+% Replaced behaviour with additional titlesec commands.
+% \usepackage{sectsty}
+% \allsectionsfont{\color{LightBlue}\rmfamily\normalfont}
+
+
+\usepackage{titlesec}
+
+\newcommand{\allsectionformat}{\color{LightBlue}\rmfamily\normalfont}
+
+\titleformat{\part}{\Huge}{\thispagestyle{empty}\color{DarkBlue}\rmfamily\normalfont\partname{ }\thepart}{1pc}{\center\Huge\color{DarkBlue}\scshape}
+% \titleformat{\part}{\Huge}{\thispagestyle{empty}\color{DarkBlue}\rmfamily\normalfont\partname{ }\thepart}{1pc}{\center\Huge\color{DarkBlue}\rmfamily\normalfont}
+
+
+% \titleformat*{\section}{\allsectionformat}
+% \titleformat*{\subsection}{\allsectionformat}
+% \titleformat*{\subsubsection}{\allsectionformat}
+% \titleformat*{\paragraph}{\allsectionformat}
+% \titleformat*{\subparagraph}{\allsectionformat}
+\addtokomafont{section}{\allsectionformat}
+\addtokomafont{subsection}{\allsectionformat}
+\addtokomafont{subsubsection}{\allsectionformat}
+\addtokomafont{paragraph}{\allsectionformat}
+\addtokomafont{subparagraph}{\allsectionformat}
+
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titleformat{\chapter}{\Huge}{\color{DarkBlue}\rmfamily\normalfont\hspace{-1cm}\chaptertitlename{ }\thechapter}{1pc}{\Huge\color{DarkBlue}\rmfamily\normalfont}
+
+% Left headings: "1  INTRODUCTION"
+%\renewcommand{\chaptermark}[1]{%
+%\markboth{\thechapter\ \ \ \ #1}{}}
+
+% Right headings: "1.1  Basics"
+%\renewcommand{\sectionmark}[1]{%
+%\markright{\thesection\ \ \ \ #1}{}}
+
+%
+% PAGE LAYOUT
+%
+% \topmargin10mm
+% \addtolength{\headheight}{2pt} % To avoid overfull vboxes from fancyhdr
+% \footskip10mm % space text bottom <-> date stamp
+% 
+% \oddsidemargin10mm
+% \evensidemargin50mm
+% 
+% \textwidth100mm
+% \marginparsep10mm
+% \marginparwidth30mm
+% 
+% 
+% \newlength{\fullwidth} % Width of text plus margin notes
+% \setlength{\fullwidth}{\textwidth}
+% \addtolength{\fullwidth}{\marginparsep}
+% \addtolength{\fullwidth}{\marginparwidth}
+% 
+% \setlength{\headwidth}{\fullwidth} % Header stretches over margin notes
+
+\usepackage{geometry}
+\geometry{inner=4cm, outer=6cm, bottom=4cm}
+
+
+%
+%  T Y P E S E T T I N G   -   T W E A K E S
+%
+
+%\lefthyphenmin=3
+%\righthyphenmax=3
+
+% instead of sloppy
+%\tolerance 1414
+%\hbadness 1414
+\tolerance 2414
+\hbadness 2414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\widowpenalty=10000     % Hurenkinde r
+\clubpenalty=10000      % Schusterjungen
+\brokenpenalty=10000
+\interlinepenalty=9000 % seitenumbruch im absatz
+\vfuzz \hfuzz
+\raggedbottom
+
+
+%
+%     U S E R    D E F I N E D    C O M M A N D S
+%
+
+% speacial abstrac environment
+\newenvironment{abstract}[1][]%
+  {\chapter*{#1}\label{cha:#1}\begin{itshape}\begin{center}}{\end{center}\end{itshape}}
+
+\newenvironment{acknowledgments}[1][Acknowledgments]%
+  {\chapter*{#1}\label{cha:#1}}{}
+
+
+% special compact list
+\newlist{scenario}{enumerate}{1}
+\setlist[scenario,1]{label=\color{LightBlue}(\alph*),itemsep=2pt, parsep=2pt}
+
+% special variable list
+% with longest label
+\newenvironment{VarDescription}[1]%
+  {\begin{list}{}{\renewcommand{\makelabel}[1]{\color{LightBlue}\rm\itshape{##1}\hfill}%
+    \settowidth{\labelwidth}{\color{LightBlue}\rm\itshape{#1}\hfill}%
+    \setlength{\leftmargin}{\labelwidth}\addtolength{\leftmargin}{\labelsep}}}%
+  {\end{list}}
+  
+% special variable list with dots
+% with longest label
+\newenvironment{DotVarDescription}[2][]%
+  {\begin{list}{}{\renewcommand{\makelabel}[1]{\color{LightBlue}\rm\itshape{##1}\dotfill{#1}}%
+    \settowidth{\labelwidth}{\color{LightBlue}\rm\itshape{#2}\dotfill{#1}}%
+    \setlength{\leftmargin}{\labelwidth}\addtolength{\leftmargin}{\labelsep}}}%
+  {\end{list}}
+
+%\chapterquote	{ QUOTATION }
+%				{ SOURCE }
+%outputs a quote with its source, can be used as an introduction to chapters
+\newcommand{\chapterquote}[2]{
+\begin{quotation}
+    \begin{flushright}
+	\noindent\emph{``{#1}''\\[1.5ex]---{#2}}
+    \end{flushright}
+\end{quotation}
+}
+
+% Margin notes
+\usepackage{mparhack}
+\ifdefined\mnotefootnote
+  \newcommand{\mnote}[1]{\marginpar{\raggedright\textsf{{\footnotesize{\color{LightBlue}#1}}}}}
+\else
+  \newcommand{\mnote}[1]{\marginpar{\raggedright\textsf{{\color{LightBlue}#1}}}}
+\fi
+
+%----------------------------------------------------------------------------------
+% 
+% \myFigure	{ FILENAME (without or without extension) }
+%			{ LABEL }
+%			{ CAPTION TEXT }
+%			{ SHORT VERSION OF CAPTION TEXT }
+%
+%Bild wird in der Breite der textspalte gesetzt
+%picture using the width of the text column
+\newcommand{\myFigure}[4]%
+{%
+\begin{figure}[ht!bp]%
+	\begin{center}%
+		\includegraphics[width= \textwidth]{#1}%
+		\caption[#4]{#3}
+		\label{#2}%
+	\end{center}%
+\end{figure}%
+}%
+%----------------------------------------------------------------------------------
+% \myBigFigure	{ FILENAME (without or without extension) }
+%				{ LABEL }
+%				{ CAPTION TEXT }
+%				{ SHORT VERSION OF CAPTION TEXT }
+%
+%Bild wird in kompletter Breite gesetzt
+%picture using full width of the page
+\newcommand{\myBigFigure}[4]
+{
+\begin{figure}[t!bp]
+	\checkoddpage
+	\ifcpoddpage
+		%nothing
+	\else
+		\hspace{-\marginparsep}\hspace{-\marginparwidth}
+	\fi
+	%use minipage to center the label beneath the figure
+	\begin{minipage}{\fullwidth}
+		\includegraphics[width= \fullwidth]{#1}
+		\caption[#4]{#3}
+		\label{#2}
+	\end{minipage}
+\end{figure}
+}

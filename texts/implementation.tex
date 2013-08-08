@@ -1,0 +1,37 @@
+\chapter{Implementation}
+\label{cha:implementation}
+
+The project WaveLoc consists of two parts, the first one is the server-based API and the second one is the application running on the client's ... devices. Some details of how these parts have been implemented are shown in the following sections.
+
+
+\section{Server-side (WaveLoc-API)}
+\label{sec:implementation__server_side}
+
+The WaveLoc API, as described in chapter \ref{cha:waveloc_api}, offers functionalities to handle the information about the users that are stored in the database up to date, to provide data about participants of WaveLoc (users or POIs) that are close by, and it maintains the friends- and favorite-lists of every user.
+
+As \mnote{Transferring the API} already mentioned in section \ref{sec:waveloc_api__functionalities}, this API uses \emph{PHP}, \emph{MySQL} and runs on the web-server \emph{Apache}. It is possible to transfer this system from one server to another one by installing the whole set of files onto the destination server. One only has to adjust some rights, the content of some files, and to set up the database. The scripts have to get write access to the folders \texttt{/smarty/cache}, \texttt{/smarty/configs}, and \texttt{/smarty/templates\_c}. Thus, they have to get the required rights (\texttt{chmod 775}\footnote{Full rights for the root-user and the owner and rights to read/write for every other user}). The only three files that have to be adjusted are the \texttt{.htaccess} in the root directory of the API, the \texttt{/data/config.php}, and  \texttt{/data/server.php}. In the first file, only the domain has to be adjusted:
+
+\begin{lstlisting}
+ErrorDocument 404 http://wave.thues.com/404.htm
+\end{lstlisting}
+
+\pagebreak
+The second file contains six variables concerning the API that determine default values, among others:
+
+\begin{lstlisting}
+<?PHP
+	$mail_admin = "hendrik@thues.com";
+	// the title of the application
+	$appname = "WaveLoc";
+	// time when an inactive user is set offline
+	$idle_time_sec = "300";
+	// default radius
+	$std_radius = "300";
+	// default time to POI
+	$std_timetopoi = "15";
+	// distance of offline-users 
+	$max_distance = "31337000";
+?>
+\end{lstlisting}
+
+\ldots{}

@@ -1,0 +1,213 @@
+\documentclass[final,twoside,11pt,titlepage,a4paper,english,bibliography=totocnumbered,listof=numbered]{scrbook}
+
+\usepackage{tikz}
+
+\def\pic{
+  \clip (0,0) rectangle (2,2);
+  \definecolor{LightBlue}{rgb}{0.55,0.55,1}
+  \definecolor{DarkBlue}{rgb}{0.2,0.2,0.5}
+  \filldraw[fill=gray!20,draw=white] (0,0) [very thick]rectangle (1,1);
+  \filldraw[fill=gray!20,draw=white] (1,1) [very thick]rectangle (2,2);
+  \filldraw[fill=LightBlue,draw=white] (0,1) [very thick]rectangle (1,2);
+}
+
+\usepackage{color}
+\definecolor{LightBlue}{rgb}{0.55,0.55,1}
+\definecolor{DarkBlue}{rgb}{0.2,0.2,0.5}
+
+\newenvironment{itemize3}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\newenvironment{itemize2}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\newenvironment{description2}{
+\begin{description}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{description}}
+
+\newenvironment{enumerate2}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\newcommand{\STYLEfootnotetext}{\begin{minipage}{.4\textwidth}\scriptsize Learning Technologies\\LuFG Informatik 9\\RWTH Aachen University\end{minipage}}
+
+\newcommand{\STYLEleftpicture}{
+  \vspace{-11.6mm}
+  \begin{tikzpicture}[xscale=-1,scale=.75]
+    \pic
+  \end{tikzpicture}}
+\newcommand{\STYLErightpicture}{
+  \vspace{-11.6mm}
+  \begin{tikzpicture}[scale=.75]
+    \pic    
+  \end{tikzpicture}
+}
+
+\newcommand{\tit}{TITLE}
+\newcommand{\keywords}{KEYWORDS}
+\newcommand{\keymore}{}
+\newcommand{\auth}{AUTHOR}
+\newcommand{\type}{Diploma Thesis}
+
+
+\include{style}
+
+% Bibliography for biblatex
+\bibliography{main}
+
+
+% custom hyphenation
+\usepackage{hyphenat}
+%\hyphenation{
+%
+%}
+
+
+% custom shortcut commands
+\newcommand{\rwth}{RWTH Aachen University}
+\newcommand{\hh}{his/her}
+\newcommand{\HH}{His/Her}
+\newcommand{\himh}{him/her}
+\newcommand{\hs}{he/she}
+\newcommand{\hhself}{himself/herself}
+\newcommand{\ack}[1]{\mbox{\textcolor{LightBlue}{#1}}}
+
+%make readable references
+\usepackage[pdftex,pdfpagelabels=true]{hyperref}
+\hypersetup{%
+	pdftitle={\tit},
+	pdfauthor={\auth},
+	pdfkeywords={\keywords, \keymore},
+	pdfsubject={\type},
+}
+
+% Begin Glossary
+%--------------------------------------------------------------
+
+\usepackage[style=long,nonumberlist]{glossaries}
+
+\makeglossaries
+
+% add = sign in the list of abbreviations:
+\renewenvironment{theglossary}
+  {\begin{longtable}{l@{ = }p{\glsdescwidth}}}
+  {\end{longtable}}%
+\renewcommand{\glsgroupskip}{}
+
+\newacronym{os}{OS}{Operating System}
+\newacronym{ui}{UI}{User Interface}
+\newacronym{wifi}{WiFi}{Wireless Fidelity}
+\newacronym{gui}{GUI}{Graphical User Interface}
+
+% End Glossary
+%--------------------------------------------------------------
+
+\usepackage{pdfpages}
+
+\addtokomafont{section}{\LARGE}
+
+\begin{document}
+
+%--------------------------------------------------------------
+\frontmatter
+
+
+%Die Titelseite aus dem "images"-Verzeichnis wird verwendet
+%use the titlepage from the 'images' directory 
+% \pagenumbering{roman} % define page number style
+
+\begin{titlepage}
+\AddToShipoutPicture*{
+\put(0,0){
+% \includegraphics[width=\paperwidth]{pictures/cover}}}
+\includegraphics[width=\paperwidth, height=\paperheight,keepaspectratio=false]{cover}}}
+\strut
+\end{titlepage}
+\thispagestyle{empty}
+
+\setcounter{page}{2} % hackywacky. otherwise cover and declaration page is not counted.
+\newpage
+\section*{\vfill{} \thispagestyle{empty}Erklärung}
+Hiermit versichere ich, dass ich diese Diplomarbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. 
+ 
+I hereby declare that I have created this work completely on my own and used no other sources or tools than the ones listed.
+
+\vspace{30 mm}
+
+\begin{flushright}
+	\rule{90mm}{1pt}
+
+	Aachen, September $10^{th}$, 2010 \hspace{24 mm} \auth
+\end{flushright}
+
+\newpage
+\input{texts/thanks}
+
+\cleardoublepage{}
+\input{texts/abstract}
+
+\tableofcontents{}
+
+\mainmatter
+
+\part{}
+\input{texts/introduction}
+\input{texts/background}
+
+\part{}
+\input{texts/implementation}
+\input{texts/evaluation}
+\part{}
+\input{texts/related_work}
+\input{texts/conclusion}
+
+
+% Set page to be wider for bibliography
+\setwidesite{}
+
+\begin{appendix} 
+
+\addappheadtotoc
+
+% Variant 1
+\chapter{Bibliography}
+\label{cha:bibliography}
+\printbibliography[heading=offline,filter=offline]
+\printbibliography[heading=online,filter=online]
+% chapter bibliography (end)
+% Variant 2
+%\printbibliography
+
+
+% \listoffigures
+
+% \listoftables
+
+%\lstlistoflistings
+
+%\printglossary[title=Abbreviations]
+
+%\input{texts/survey_data}
+
+% \input{listings/listings}
+
+
+\end{appendix}
+
+\backmatter
+
+\end{document}
