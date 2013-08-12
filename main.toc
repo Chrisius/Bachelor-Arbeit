@@ -10,28 +10,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Personal Learning Environments}{5}{section.2.1}
+\contentsline {section}{\numberline {2.1}Self reflection}{5}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Native Visualization}{5}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Provided Data}{5}{section.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{II\hspace {1em}}{7}{part.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Implementation}{9}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Server-side (WaveLoc-API)}{9}{section.3.1}
+\contentsline {section}{\numberline {3.1}Paper Prototype}{9}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Evaluation}{11}{chapter.4}
+\contentsline {section}{\numberline {3.2}Time Schedule}{9}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Usability-Tests}{11}{section.4.1}
+\contentsline {section}{\numberline {3.3}Basic Layout}{9}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}}{13}{part.3}
+\contentsline {section}{\numberline {3.4}Data Management}{9}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Related Work}{15}{chapter.5}
+\contentsline {section}{\numberline {3.5}Mapview}{9}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Google Maps}{15}{section.5.1}
+\contentsline {section}{\numberline {3.6}Chartview}{9}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{17}{chapter.6}
+\contentsline {section}{\numberline {3.7}Timeline}{9}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Review}{17}{section.6.1}
+\contentsline {chapter}{\numberline {4}Evaluation}{13}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendices}{18}{section*.3}
+\contentsline {part}{III\hspace {1em}}{15}{part.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusion}{17}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Review}{17}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendices}{18}{section*.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Bibliography}{19}{appendix.A}
