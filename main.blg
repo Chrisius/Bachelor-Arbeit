@@ -1,0 +1,20 @@
+[0] Config.pm:361> INFO - This is Biber 1.5
+[0] Config.pm:364> INFO - Logfile is 'main.blg'
+[75] biber-MSWIN:190> INFO - === %a %b %e, %Y, %H:%M:%S
+[75] Biber.pm:327> INFO - Reading 'main.bcf'
+[151] Biber.pm:619> INFO - Found 8 citekeys in bib section 0
+[157] Biber.pm:644> INFO - Section 'entry' list 'nty' is repeated for section 0 - ignoring subsequent mentions
+[171] Biber.pm:2976> INFO - Processing section 0
+[189] Biber.pm:3086> INFO - Looking for bibtex format file 'main.bib' for section 0
+[192] bibtex.pm:889> INFO - Decoding LaTeX character macros into UTF-8
+[193] bibtex.pm:764> INFO - Found BibTeX data source 'main.bib'
+[208] Utils.pm:167> WARN - I didn't find a database entry for 'canalysandroid' (section 0)
+[209] Utils.pm:167> WARN - I didn't find a database entry for 'iphonedev' (section 0)
+[209] Utils.pm:167> WARN - I didn't find a database entry for 'ruleof5' (section 0)
+[209] Utils.pm:167> WARN - I didn't find a database entry for 'ms2010' (section 0)
+[262] Biber.pm:2860> INFO - Overriding locale 'English_United States.1252' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[262] Biber.pm:2866> INFO - Sorting 'entry' list 'nty' keys
+[262] Biber.pm:2870> INFO - No sort tailoring available for locale 'English_United States.1252'
+[293] bbl.pm:462> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[293] bbl.pm:535> INFO - Output to main.bbl
+[294] Biber.pm:107> INFO - WARNINGS: 4
