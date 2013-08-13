@@ -1,17 +1,18 @@
 \chapter{Background}
 \label{cha:background}
-In this chapter provides background information about the main topic of this bachelor thesis. First, the ongoing trend of using a smartphone in nearly every situation and thus need of keeping track of one's own mobile activities is discussed. To grant an application the possibility to give self reflecting impressions the application itself needs to be provided with personal data of the user. The second section talks about this provided data, its origin and how it is gathered. Once the origin of the information is discussed the next section talks about the representation of this it. In this context the meaning of native visualization is explained and an alternative is presented which involves a short introduction of a currently written master thesis. The last section lists and explains which hardware and software was used during the implementation.
+This chapter provides background information about the main topic of this bachelor thesis. First, the ongoing trend of using a smartphone in nearly every situation and therefore the need of keeping track of one's own mobile activities is discussed. To grant an application the possibility to give self reflecting impressions the application itself needs to be provided with personal data of the user. The second section is about this provided data, its origin and how it is gathered. Once the origin of the information is discussed the next section talks about the representation of this it. In this context the meaning of native visualization is explained and an alternative is presented which involves a short introduction of a currently written master thesis. The last section lists and explains which hardware and software was used during the implementation.
 
 \section{Self reflection}
-Communication, social networks, camera, games, news, shopping, music and many more categories exists which describe a smartphone. As mentioned in the introduction, smartphones are used in nearly every situation. It is a modern multitool which is used by millions of people in Germany \cite{gstatistic}.\\
+\textcolor{red}{ADD REFERENCE TO SELF REFLECTION PAPER!}\\
+A Smartphone has many usabilities. It can be used as a camera, newspaper, music player or as a portable gaming device and those are just a few examples. There are a lot more ways to use a smartphone and as mentioned in the introduction, they are used in nearly every situation. It is a modern multitool which was used by more than 23 million people in Germany in 2012 \cite{gstatistic}.\\
 As \mnote{Smartphones as modern multitools} advantageous as it may be in everyday situations, the downside is that most people do not know how much time they spend on their phone and thus do not know how distracting it may be.
-For example, checking new mails may lead the user to also check the newest facebook messages and stay within this application a few minutes longer than expected. Because at least 50\% of smartphone owners use the Internet with their device \cite{gstatistic}, thus most people are always available through instant messaging services like whatsapp. The result is that people write and receive messages more often. And because smartphones are capable of running diverting games, one may be uses its device to beat the last high-score.
+For example, checking new mails may lead the user to also check the newest facebook messages and stay within this application a few minutes longer than expected. At least 50\% of smartphone owners access the Internet with their device \cite{gstatistic}, thus most people are always available through instant messaging services like whatsapp. The result is that people write and receive messages more often. And because smartphones are capable of running diverting games, one may uses its device to beat the last achieved high-score.
 
 But a smartphone \mnote{Distraction} can be a great helper too. It is an easy to use digital calendar which reminds the user of all upcoming events, it can be used as a travel guide or a navigation system, it allows to quickly respond to an important email and has many more useful advantages. But the previous short examples demonstrate that a smartphone can also have a distracting influence to its owner.
 
 At this point the the idea of self reflection is needed. The concept of self reflection is the critical reflection on one's own actions and positions and coming to a conclusion. This can be used to assess the distracting influence of smartphones to its owner. But for an accurate assessment one needs to keep track of his or hers own daily activities, which is nearly impossible to do for a smartphone without the help of tools that provide background information.
 
-As \mnote{Provide a self reflecting view} mentioned the help of a tool is needed which provides information about the owner's mobile day in a self reflecting manner. This tool in form of a smartphone application should display the information such that the user is able to instantly see where, when and for what the device was used. If one is provided with this data, he or she is able to say, that they used their smartphone in a productive manner or if they used it for entertainment. Further more, one could tell if he or she used the smartphone to divert themselves from working or studying. Although the application can display the needed information, the conclusion must been drawn by the user.
+As \mnote{Provide a self reflecting view} mentioned, the help of a tool is needed which provides information about the owner's mobile day in a self reflecting manner. This tool in form of a smartphone application should display the information such that the user is able to instantly see where, when and for what the device was used. If one is provided with this data, he or she is able to say, that they used their smartphone in a productive manner or if they used it for entertainment. Further more, one could tell if he or she used the smartphone to divert themselves from working or studying. Although the application can display the needed information, the conclusion must been drawn by the user.
 
 With \mnote{Possible improvements in productivity} this application and the provided information a user may be willing to rethink his or her work respectively study behavior. This then could lead to less frequent use in distracting applications, thus improving efficiency and productivity in daily tasks.
 
@@ -23,20 +24,28 @@ In the last section the idea of an application which displays information in a w
 
 The application itself will not gather the data it uses, instead the data is downloaded from a server and stored internally. The reason that the information will be collected externally, is the limitation of this thesis to the visualization.
 
-The \mnote{Big Brother gathers data} mentioned data arise from an external application called ``Big Brother''. This application is based on the master thesis of Torsten Kammer and was reimplemented and developed by diploma computer scientist Hendrik Th\"us in 2013 \cite{bigbrother}. \ldots{} %It is part of a project called PRiME \ldots{}\\
-\textcolor{red}{fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu}\\
+The \mnote{Big Brother gathers data} mentioned data arises from an external application called ``Big Brother''. This application is based on the master thesis of Torsten Kammer and was reimplemented and developed by diploma computer scientist Hendrik Th\"us in 2013 \cite{bigbrother}. \ldots{} %It is part of a project called PRiME \ldots{}\\
+\\ \textcolor{red}{IMPROVE REFERENCES}\\
 The data Big Brother gathers, is send to a server where it can later be downloaded and used by the application developed for this bachelor thesis. The data contains amongst others information about the user's visited locations, the name of the currently used application, start and end time of used applications. This data is uploaded and stored to a web server, which is then accessed by this thesis' application.
 
 With \mnote{Privacy issues} the revelations published by Edward Snowden in June 2013 about the U.S. American spy program PRISM one might be concerned about privacy violation by third parties. It should just be said, that this project is still an experimental phase. If it should be published for a larger audience than the developers much work would be put into encryption and ensuring the prevention of unauthorized access by third parties.
 
--prepare data and store only needed things\\
--processed data for ready for visualization\\
+One \mnote{Reasons for online stored data} of the reasons why the data of daily activities is stored online is the limited storage of mobile devices. This way the used size of storage can be minimized and only needed information can be downloaded. The possibility to merge data from other devices the user owns like PCs, laptops and tablets is another reason to upload the data. Being able to access the data from multiple devices like tablets is also an important point.
 
-%Dipl.-Inform. Hendrik Th\"us has build an application called ``Big Brother'' which takes over the task of keeping track of the smartphone's activities.
-%It tracks among others start and end time, location and name of an used application.
+The idea of a data set which also contains information about other used devices has great potential in granting an even better overview of one's daily activities and thus this would make the self reflecting view provided by the application even more meaningful.
 
 \newpage
 \section{Native Visualization}
+Now that the origin of the provided data has been explained, the idea of a native visualization will be brought closer.
 
+Visualisierung meint dass darstellen von abstrakten Daten oder Informationen in visuell erfassbarer From. Dies kann nicht nur in der Informatik gefunden werden, sondern an vielen verschiedenen Stellen, genaugenommen überall wo jemand versucht etwas visuell auszurdrücken, beispielsweise einem Bild. Und dies ist nicht nur auf die heutige zeit beschränkt, Höhlenmenschen brachten damals schon ihr leben mit hilfe von Höhlenmaleri zum ausdruck.
+Visualisierung in der Informatik bezieht sich wie bereits erwähnt auf das darstellen von Daten in visuell erfassbarer Form, zB daten einer Befragung in balkendiagramme oder ein Graph für den Temperaturverlauf der letzten woche. Die Visualisierung hat in diesem falldie aufgabe die bereits erwähnten daten in ansprechnder und leicht erkennbarer art und weise darzustellen, sodass der nutzer leich daraus schlüsse ziehen kann.
+
+Native visualisierung beschreibt das erstellen von visuell erfassbaren Objekten auf einem OS nur unter der zuhilfenahme von haus aus vorhandenen resourcen.
+
+%Visualization means displaying data or information in form of images. The meaning of this term is not new nor limited to the field of computer science. It can be found at every places where someone wants to provide a message with a picture. This technique goes back to the origin mankind, when caveman first started to draw scenes of their live.
+%-definition of visualization
+-what is native visualization
+-alternative Thomas work
 \newpage
 \section{Hardware and Software}
