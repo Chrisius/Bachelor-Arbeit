@@ -19,15 +19,15 @@
 
 \refsection{0}
   \sortlist{entry}{nty}
-    \entry{appfacebook}{online}{}
-      \field{sortinit}{F}
-      \field{labeltitle}{Facebook App}
-      \field{title}{Facebook App}
-      \field{urlday}{05}
-      \field{urlmonth}{06}
+    \entry{bigbrother}{online}{}
+      \field{sortinit}{B}
+      \field{labeltitle}{Big Brother Application}
+      \field{title}{Big Brother Application}
+      \field{urlday}{08}
+      \field{urlmonth}{13}
       \field{urlyear}{2013}
       \verb{url}
-      \verb http://www.windowsphone.com/de-de/store/app/facebook/82a23635-5bd9-df11-a844-00237de2db9e
+      \verb http://learning-context.de/text/3/Collectors
       \endverb
     \endentry
     \entry{gstatistic}{online}{}
@@ -52,17 +52,6 @@
       \verb http://services.google.com/fh/files/blogs/our_mobile_planet_germany_de.pdf
       \endverb
     \endentry
-    \entry{applatitude}{online}{}
-      \field{sortinit}{G}
-      \field{labeltitle}{Google Latitude App}
-      \field{title}{Google Latitude App}
-      \field{urlday}{05}
-      \field{urlmonth}{06}
-      \field{urlyear}{2013}
-      \verb{url}
-      \verb https://itunes.apple.com/de/app/google-latitude/id306586497?mt=8
-      \endverb
-    \endentry
     \entry{googlelatitudedead}{online}{}
       \field{sortinit}{L}
       \field{labeltitle}{Latitude discontinued}
@@ -75,10 +64,6 @@
       \endverb
     \endentry
   \endsortlist
-  \missing{iphonedev}
-  \missing{ruleof5}
-  \missing{canalysandroid}
-  \missing{ms2010}
 \endrefsection
 \endinput
 
