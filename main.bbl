@@ -19,6 +19,25 @@
 
 \refsection{0}
   \sortlist{entry}{nty}
+    \entry{androidpercent}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=08269713ef41e10153f508efda285474}{Beiersmann}{B\bibinitperiod}{Stefan}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=08269713ef41e10153f508efda285474}{Beiersmann}{B\bibinitperiod}{Stefan}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{08269713ef41e10153f508efda285474}
+      \strng{fullhash}{08269713ef41e10153f508efda285474}
+      \field{sortinit}{B}
+      \field{labeltitle}{Android erreicht 70 Prozent Marktanteil in Europa}
+      \field{title}{Android erreicht 70 Prozent Marktanteil in Europa}
+      \field{urlday}{08}
+      \field{urlmonth}{14}
+      \field{urlyear}{2013}
+      \verb{url}
+      \verb http://www.zdnet.de/88160639/android-erreicht-70-prozent-marktanteil-in-europa/
+      \endverb
+    \endentry
     \entry{bigbrother}{online}{}
       \field{sortinit}{B}
       \field{labeltitle}{Big Brother Application}
@@ -28,6 +47,63 @@
       \field{urlyear}{2013}
       \verb{url}
       \verb http://learning-context.de/text/3/Collectors
+      \endverb
+    \endentry
+    \entry{androidtutorials}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{labeltitle}{Development Tutorials}
+      \field{title}{Development Tutorials}
+      \field{urlday}{08}
+      \field{urlmonth}{15}
+      \field{urlyear}{2013}
+      \verb{url}
+      \verb http://developer.android.com/training/index.html
+      \endverb
+    \endentry
+    \entry{androidversionpercent}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{labeltitle}{Distribution of Android Versions}
+      \field{title}{Distribution of Android Versions}
+      \field{urlday}{08}
+      \field{urlmonth}{14}
+      \field{urlyear}{2013}
+      \verb{url}
+      \verb http://developer.android.com/about/dashboards/index.html
+      \endverb
+    \endentry
+    \entry{googlelatitudedead}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{labeltitle}{Latitude discontinued}
+      \field{title}{Latitude discontinued}
+      \field{urlday}{08}
+      \field{urlmonth}{12}
+      \field{urlyear}{2013}
+      \verb{url}
+      \verb https://support.google.com/gmm/answer/3001634
       \endverb
     \endentry
     \entry{gstatistic}{online}{}
@@ -52,16 +128,23 @@
       \verb http://services.google.com/fh/files/blogs/our_mobile_planet_germany_de.pdf
       \endverb
     \endentry
-    \entry{googlelatitudedead}{online}{}
-      \field{sortinit}{L}
-      \field{labeltitle}{Latitude discontinued}
-      \field{title}{Latitude discontinued}
-      \field{urlday}{08}
-      \field{urlmonth}{12}
-      \field{urlyear}{2013}
-      \verb{url}
-      \verb https://support.google.com/gmm/answer/3001634
-      \endverb
+    \entry{thomasthesis}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{hash=b9d1fd26107b9df17436696426f45bd3}{Honné}{H\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=b9d1fd26107b9df17436696426f45bd3}{Honné}{H\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen University}%
+      }
+      \strng{namehash}{b9d1fd26107b9df17436696426f45bd3}
+      \strng{fullhash}{b9d1fd26107b9df17436696426f45bd3}
+      \field{sortinit}{H}
+      \field{labeltitle}{Interactive Visualizations of Activity Patterns in Learning Environments}
+      \field{title}{Interactive Visualizations of Activity Patterns in Learning Environments}
+      \field{type}{mathesis}
+      \field{year}{2013}
     \endentry
   \endsortlist
 \endrefsection

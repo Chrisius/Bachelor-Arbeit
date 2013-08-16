@@ -33,19 +33,31 @@ With \mnote{Privacy issues} the revelations published by Edward Snowden in June 
 One \mnote{Reasons for online stored data} of the reasons why the data of daily activities is stored online is the limited storage of mobile devices. This way the used size of storage can be minimized and only needed information can be downloaded. The possibility to merge data from other devices the user owns like PCs, laptops and tablets is another reason to upload the data. Being able to access the data from multiple devices like tablets is also an important point.
 
 The idea of a data set which also contains information about other used devices has great potential in granting an even better overview of one's daily activities and thus this would make the self reflecting view provided by the application even more meaningful.
-
-\newpage
+%%%
 \section{Native Visualization}
 Now that the origin of the provided data has been explained, the idea of a native visualization will be brought closer.
 
-Visualisierung meint dass darstellen von abstrakten Daten oder Informationen in visuell erfassbarer From. Dies kann nicht nur in der Informatik gefunden werden, sondern an vielen verschiedenen Stellen, genaugenommen überall wo jemand versucht etwas visuell auszurdrücken, beispielsweise einem Bild. Und dies ist nicht nur auf die heutige zeit beschränkt, Höhlenmenschen brachten damals schon ihr leben mit hilfe von Höhlenmaleri zum ausdruck.
-Visualisierung in der Informatik bezieht sich wie bereits erwähnt auf das darstellen von Daten in visuell erfassbarer Form, zB daten einer Befragung in balkendiagramme oder ein Graph für den Temperaturverlauf der letzten woche. Die Visualisierung hat in diesem falldie aufgabe die bereits erwähnten daten in ansprechnder und leicht erkennbarer art und weise darzustellen, sodass der nutzer leich daraus schlüsse ziehen kann.
+The \mnote{What does visualization mean?} term of visualization means representing of abstract data or information, like a text, in a visual ascertainable form. Its meaning is not limited to computer science. It can be found in various situations and places, technically anywhere where someone tries to convey information in a visual way. This may be a picture of an artist or a even a movie. The concept is not even limited to modern time. Since the beginning of mankind, caveman try express their life with pictures in form of cave painting.
 
-Native visualisierung beschreibt das erstellen von visuell erfassbaren Objekten auf einem OS nur unter der zuhilfenahme von haus aus vorhandenen resourcen.
+Speaking of computer science, visualization means, as mentioned, to represent data in a illustrative way. For example, creating a pie chart for results of a survey or draw a graph representing the daily temperatures for a week. For this thesis the visualization has to fulfills the task of displaying one's daily activities in an appealing and easily to understand way, such that one can directly draw conclusion from the information.
 
-%Visualization means displaying data or information in form of images. The meaning of this term is not new nor limited to the field of computer science. It can be found at every places where someone wants to provide a message with a picture. This technique goes back to the origin mankind, when caveman first started to draw scenes of their live.
-%-definition of visualization
--what is native visualization
--alternative Thomas work
-\newpage
+Native \mnote{Native visualization} visualization describes creating of visual ascertainable objects only by means of resources that a specific system provides without any addition.\\
+In this thesis, the application will be implemented for the mobile operating system Android 4.0.3 and higher. Native visualization under Android means the use of Java and the access to the standard Android application programming interface. The application will not use JavaScript or anything else as this would infringe the terms of native visualization.
+
+An \mnote{A non native visualization of daily activities} alternative to native visualization of activities can be found in Thomas Honné's Master thesis ``Interactive Visualizations of Activity Patterns in Learning Environments'' \cite{thomasthesis}. The thesis describes, among other topics, the visualization of daily activities in a web browser environment. For comparison an interesting fact is, that the data arises from the same application.
+
+An advantage over the non native method is that data can easily be stored locally, thus making the application available for offline usage assuming that the needed data has been downloaded at some point in the past.\\
+With a native application the user has tool for self reflection which is not permanently bound to an Internet connection and does not require any additional non native resources.
+%%%%
 \section{Hardware and Software}
+As mentioned in the previous section the thesis' application will be developed for Android 4.0.3 and higher. To get an impression of the used tools in the development process this section describes the used software, the development environment and Android, as well as the used hardware, the development device.
+
+The \mnote{The operating system of choice} application was developed for Android 4.0.3 ``Ice Cream Sandwich'' with the application programming interface level 15. The application may be able to support lower versions of android but this has not been tested nor was it a goal of development. To minimize overhead due to compatibility adjustments the support is only guaranteed for Android 4.0.3 and newer versions, which account for 63\% of all Android devices \cite{androidversionpercent}.\\
+Android was the operating system of choice because it has a free developer license, great supportive community and with a share of 76.7\% in quart 2 of 2013 \cite{androidpercent}, Android is the largest market share holder of mobile operating systems.
+
+The \mnote{The test device}testing device was the Motorola tablet Xoom with Android 4.0.3. The tablet with a screen size of 10.1 inches and resolution of 1280 times 800 pixel gave great advantage in the testing process of the application. Its screen is large enough to display all relevant data without minimizing their visual appearance. In addition the screen size allows precise testing of multi-touch gestures. The alternative to the real development device would have been an Android emulator provided by Google. With the emulator the development of this application would have been nearly impossible due to the fact that it does not support the ability to simulate multi-touch input with a normal mouse and the nonexistent support for GoogleMaps.
+
+Google's \mnote{The development environment} recommended software development kit Eclipse with Android Development Tools served as development environment. Working and developing with Eclipse was simple and comfortable due to Google's numerous tutorials \cite{androidtutorials}. Neither installing the software development kit on a Windows 7 computer nor setting up new projects was a problem. %(After flipping the usb cable three times to get the correct side up, 
+The test device connected to the computer was directly recognized by eclipse and executing and testing written code on the it proceeded without problems. Eclipse's debug mode was also very helpful at many points in the development process and helped to track down hidden bugs.
+
+Working with Eclipse and Android was comfortable, a lot easier than expected and straightforward, even for a first time developer. Eclipse's improvement proposals and performance advices and Google's tutorials with helpful examples and background informations made this project a great educational experience.
