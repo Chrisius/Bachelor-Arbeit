@@ -20,30 +20,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{II\hspace {1em}}{13}{part.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Development and Implementation}{15}{chapter.3}
+\contentsline {chapter}{\numberline {3}Development and\\Implementation}{15}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Paper Prototype}{16}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Time Schedule}{18}{section.3.2}
+\contentsline {section}{\numberline {3.2}Time Schedule}{20}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Basic Layout}{19}{section.3.3}
+\contentsline {section}{\numberline {3.3}Basic Layout}{21}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Data Management}{20}{section.3.4}
+\contentsline {section}{\numberline {3.4}Data Management}{22}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Mapview}{21}{section.3.5}
+\contentsline {section}{\numberline {3.5}Mapview}{23}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Chartview}{22}{section.3.6}
+\contentsline {section}{\numberline {3.6}Chartview}{24}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Timeline}{23}{section.3.7}
+\contentsline {section}{\numberline {3.7}Timeline}{25}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Evaluation}{25}{chapter.4}
+\contentsline {chapter}{\numberline {4}Evaluation}{27}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}}{27}{part.3}
+\contentsline {part}{III\hspace {1em}}{29}{part.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}
+\contentsline {chapter}{\numberline {5}Conclusion}{31}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Review}{29}{section.5.1}
+\contentsline {section}{\numberline {5.1}Review}{31}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendices}{30}{section*.5}
+\contentsline {chapter}{Appendices}{32}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Bibliography}{31}{appendix.A}
+\contentsline {chapter}{\numberline {A}Bibliography}{33}{appendix.A}
