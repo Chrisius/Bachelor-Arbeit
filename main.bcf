@@ -1958,11 +1958,14 @@
     <bcf:citekey order="4">googlelatitudedead</bcf:citekey>
     <bcf:citekey order="5">gstatistic</bcf:citekey>
     <bcf:citekey order="6">gstatistic</bcf:citekey>
-    <bcf:citekey order="7">bigbrother</bcf:citekey>
-    <bcf:citekey order="8">thomasthesis</bcf:citekey>
-    <bcf:citekey order="9">androidversionpercent</bcf:citekey>
-    <bcf:citekey order="10">androidpercent</bcf:citekey>
-    <bcf:citekey order="11">androidtutorials</bcf:citekey>
+    <bcf:citekey order="7">thorstensthesis</bcf:citekey>
+    <bcf:citekey order="8">bigbrother</bcf:citekey>
+    <bcf:citekey order="9">sarahhallersthesis</bcf:citekey>
+    <bcf:citekey order="10">thomasthesis</bcf:citekey>
+    <bcf:citekey order="11">androidversionpercent</bcf:citekey>
+    <bcf:citekey order="12">androidpercent</bcf:citekey>
+    <bcf:citekey order="13">androidtutorials</bcf:citekey>
+    <bcf:citekey order="14">colorpicker</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="nty">
   <bcf:sorting>

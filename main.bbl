@@ -128,6 +128,25 @@
       \verb http://services.google.com/fh/files/blogs/our_mobile_planet_germany_de.pdf
       \endverb
     \endentry
+    \entry{sarahhallersthesis}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{hash=cbb52ae43a2a22908429de1c8274b591}{Haller}{H\bibinitperiod}{Sarah}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=cbb52ae43a2a22908429de1c8274b591}{Haller}{H\bibinitperiod}{Sarah}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {Rheinische Friedrich-Wilhelms-Universität Bonn}%
+      }
+      \strng{namehash}{cbb52ae43a2a22908429de1c8274b591}
+      \strng{fullhash}{cbb52ae43a2a22908429de1c8274b591}
+      \field{sortinit}{H}
+      \field{labeltitle}{Pektorale}
+      \field{subtitle}{Eine Studie zur Form, Bedeutung, Verwendung und Praxis anhand der Dahschur-Pektorale aus dem Mittleren Reich des Grabkomplexes Sesostris' III.}
+      \field{title}{Pektorale}
+      \field{type}{BA thesis}
+      \field{year}{2013}
+    \endentry
     \entry{thomasthesis}{thesis}{}
       \name{labelname}{1}{}{%
         {{hash=b9d1fd26107b9df17436696426f45bd3}{Honné}{H\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
@@ -145,6 +164,43 @@
       \field{title}{Interactive Visualizations of Activity Patterns in Learning Environments}
       \field{type}{mathesis}
       \field{year}{2013}
+    \endentry
+    \entry{thorstensthesis}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{hash=5f482dc6ec63ecbab918e8a082280a06}{Kammer}{K\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=5f482dc6ec63ecbab918e8a082280a06}{Kammer}{K\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen University}%
+      }
+      \strng{namehash}{5f482dc6ec63ecbab918e8a082280a06}
+      \strng{fullhash}{5f482dc6ec63ecbab918e8a082280a06}
+      \field{sortinit}{K}
+      \field{labeltitle}{Capturing Activity Context in Mobile Learning Environments}
+      \field{title}{Capturing Activity Context in Mobile Learning Environments}
+      \field{type}{mathesis}
+      \field{year}{2013}
+    \endentry
+    \entry{colorpicker}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=220879e1727fcc902d10b88e81163857}{Sugianto}{S\bibinitperiod}{Yuku}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=220879e1727fcc902d10b88e81163857}{Sugianto}{S\bibinitperiod}{Yuku}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{220879e1727fcc902d10b88e81163857}
+      \strng{fullhash}{220879e1727fcc902d10b88e81163857}
+      \field{sortinit}{S}
+      \field{labeltitle}{Android Color Picker}
+      \field{title}{Android Color Picker}
+      \field{urlday}{08}
+      \field{urlmonth}{23}
+      \field{urlyear}{2013}
+      \verb{url}
+      \verb https://code.google.com/p/android-color-picker/
+      \endverb
     \endentry
   \endsortlist
 \endrefsection
