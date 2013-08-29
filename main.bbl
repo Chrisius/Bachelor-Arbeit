@@ -19,6 +19,17 @@
 
 \refsection{0}
   \sortlist{entry}{nty}
+    \entry{achartengine}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{AChartEngine}
+      \field{title}{AChartEngine}
+      \field{urlday}{05}
+      \field{urlmonth}{06}
+      \field{urlyear}{2013}
+      \verb{url}
+      \verb http://www.achartengine.org/
+      \endverb
+    \endentry
     \entry{androidpercent}{online}{}
       \name{labelname}{1}{}{%
         {{hash=08269713ef41e10153f508efda285474}{Beiersmann}{B\bibinitperiod}{Stefan}{S\bibinitperiod}{}{}{}{}}%
@@ -47,6 +58,25 @@
       \field{urlyear}{2013}
       \verb{url}
       \verb http://learning-context.de/text/3/Collectors
+      \endverb
+    \endentry
+    \entry{asynctask}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{labeltitle}{Async Task}
+      \field{title}{Async Task}
+      \field{urlday}{08}
+      \field{urlmonth}{24}
+      \field{urlyear}{2013}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/os/AsyncTask.html
       \endverb
     \endentry
     \entry{androidtutorials}{online}{}
@@ -126,6 +156,17 @@
       \field{year}{2012}
       \verb{url}
       \verb http://services.google.com/fh/files/blogs/our_mobile_planet_germany_de.pdf
+      \endverb
+    \endentry
+    \entry{googleapi}{online}{}
+      \field{sortinit}{G}
+      \field{labeltitle}{Google api}
+      \field{title}{Google api}
+      \field{urlday}{08}
+      \field{urlmonth}{26}
+      \field{urlyear}{2013}
+      \verb{url}
+      \verb https://code.google.com/apis/console/
       \endverb
     \endentry
     \entry{sarahhallersthesis}{thesis}{}
