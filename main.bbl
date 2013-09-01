@@ -206,6 +206,24 @@
       \field{type}{mathesis}
       \field{year}{2013}
     \endentry
+    \entry{iuriisthesis}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{hash=80da64f3ce984956c3654417dbe8019c}{Ignatko}{I\bibinitperiod}{Iurii}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=80da64f3ce984956c3654417dbe8019c}{Ignatko}{I\bibinitperiod}{Iurii}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen University}%
+      }
+      \strng{namehash}{80da64f3ce984956c3654417dbe8019c}
+      \strng{fullhash}{80da64f3ce984956c3654417dbe8019c}
+      \field{sortinit}{I}
+      \field{labeltitle}{Applying Data Mining Techniques to Discover Patterns in Context Activity Data}
+      \field{title}{Applying Data Mining Techniques to Discover Patterns in Context Activity Data}
+      \field{type}{mathesis}
+      \field{year}{2013}
+    \endentry
     \entry{thorstensthesis}{thesis}{}
       \name{labelname}{1}{}{%
         {{hash=5f482dc6ec63ecbab918e8a082280a06}{Kammer}{K\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
