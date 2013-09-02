@@ -1,10 +1,34 @@
 \chapter{Conclusion}
 \label{cha:conclusion}
 
+This thesis has shown the developing of an application for an Android device, which visualize data of daily activities in a native way.
 
 \section{Summary and Review}
-foo
+This thesis has shown how an application as a tool for self reflection is created. First, the reasons and objectives for this thesis have been discussed, describing the need of a tool for self reflection, as one is not able of keeping track of his or hers daily smartphone activities. Then background information about the data of ones daily activities and its origin, a definition and counter example of native visualization and an explanation of self reflection have been given. It has been explained that Android would be the operating system of choice and the development device has been introduced.
+
+In \mnote{Paper prototype and application objectives} the second part, the first idea for layout and functionality of the application was described with the help of a paper prototype. It described the use of three major views and explained their functionality. The \emph{Map View} should provide an answer to the question ``Where have I used my device?'', the \emph{Chart View} for the question ``For what have I used my device?'' and the last view, the \emph{Timeline}, would answere the question ``When have I used my device?''. Each view was supposed to provide enough information to partly answer the other questions and work as a stand alone view, but the best experience would only be made when using all three views in combination.\\
+It has been stated, that this application should perform as a central information system which provides the user with all necessary information, presented in an intuitive way. And since the project focuses on a native solution, it should tested what is possible without the use of Java Script and other external help.
+
+The \mnote{Implementation} implementation part described how each view and the basic layout was realized and showed, how the objective of providing the best experience while using views in combination, has been fulfilled with each view linking to necessary other views to get more details. But the application could be improved, in case of the stand alone views, as the \emph{Chart View} and \emph{Timeline} do not display location information. It has also explained the use of third party code, like the color picker and the AChartEngine and the use of different Android apis.
+
+The evaluation shows how different users reacted while using the application and showed, where the application has its strength and weakness. It also demonstrated, where the application can be improved in future works.
+
+The \mnote{Conclusion} delaying of position based charts and the position labeling in the timeline for future work had to be done, because the only acceptable solutions would require context analyzing which could not have been realized and implemented in a satisfying way for this Bachelor thesis, due to time restrictions. But in conclusion, one can say, that the developed application is possible to provide a visual satisfying, self reflecting view which has been created in a native way.
 
 \section{Future Work}
-ba
+As mentioned in the previous section, the application has potential to be enhanced. This potential can be used for future work and possible parts of the application to improve will be demonstrated in the following.
+
+First, \mnote{Improving controls} general improvements for controlling the application could be implemented. For example gestures like a two finger fling to switch the displayed view, or tap and hold open the color menu of a specific application.
+
+Another enhancement would be the adaption of the application to run on smartphone. Right now, the visible space for the main views is to small and there are some issues with option headers and font sizes. To realize this, the implementation of a new layout is required along with moving the left options menu to an extra option menu.
+
+An \mnote{New view}additional view displaying a line graph could also be an improvement. This graph would display the weekly usages of an application and could be personalized by adding and deleting applications or groups of applications.
+
+But \mnote{Improving existing views} the existing views can also be improved. The map view could be more structured, for example adding numbers to the markers, different colors for different days and merging markers that are too close together. The views could be extended with displaying of position data. The chart view would be added with charts displaying applications used at work, at home and on the move and the timeline would label timespans according to the visited locations. 
+
+Context \mnote{Context sensitive evaluation} sensitive information, to differentiate between time spent at work and free time, would also enhance the self reflecting views, as one may work from home or is working while on the move. Further steps would be the categorizing of applications into groups like productive, neutral and entertainment, such that a pie chart could display application groups and one could directly see if has been productive at work. Taking the idea of context sensitive information and grouping a step further, the application could analyze all used applications and weight them according to their assigned group, time and location to display the user if he or she was productive at that day.
+
+Potential \mnote{Extending the provided data} improvements in case of self reflection may arise from the provided data itself. The possibility to not just track data from once mobile device, but instead from his or hers PC or laptop would greatly improve the available data. But to realize this, respective application for stationary devices have to be developed as they do not use Android, but run Windows, Linux or Mac OS. So a potential future work would also be the development of such a program.
+
+As one has seen, extending and enhancing the application in direct way by improving the views or indirect by extending the dataset, this thesis has created a basis for future projects. 
 \newpage
